@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.component.css">
+  <script src="https://kit.fontawesome.com/5e2e201a7f.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+  <title>HOME</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos generales */
+    .container {
+      max-width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+
+    /* Estilos para el título de la sección */
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+    }
+
+    /* Estilos para la descripción de la sección */
+    .section-description {
+      text-align: justify;
+      padding: 0 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+
+    /* Estilos para pantallas grandes */
+
+    @media (min-width: 992px) {
+      .jumbotron {
+        margin-top: 80px;
+      }
+
+      .col-md-6 {
+        float: left;
+        width: 50%;
+      }
+
+      #imagen_antena {
+        width: 500px;
+        height: 300px;
+        margin-left: 30px;
+      }
+
+      iframe {
+        width: 400px;
+        height: 300px;
+      }
+
+      .col-md-6 p {
+        padding: 10px;
+      }
+    }
+
+    /* Estilos para tablets */
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .jumbotron {
+        margin-top: 60px;
+      }
+
+      .col-md-6 {
+        width: 100%;
+      }
+
+      #imagen_antena {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Estilos para celulares */
+
+    @media (max-width: 767px) {
+      .jumbotron {
+        margin-top: 40px;
+      }
+
+      .col-md-6 {
+        width: 100%;
+      }
+
+      #imagen_antena {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Estilos adicionales para pantallas grandes */
+
+    @media (min-width: 1200px) {
+      .col-md-6 p {
+        font-size: 18px;
+        padding: 20px;
+      }
+    }
+
+    /* Estilos adicionales para pantallas medianas */
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .col-md-6 p {
+        font-size: 16px;
+        padding: 15px;
+      }
+    }
+
+    /* Estilos adicionales para pantallas pequeñas */
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .col-md-6 p {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    /* Estilos adicionales para pantallas extra pequeñas */
+
+    @media (max-width: 767px) {
+      .col-md-6 p {
+        font-size: 12px;
+        padding: 5px;
+      }
+    }
+    /* Estilos para hacer que las cards tengan la misma altura */
+    .card {
+      height: 380px; /* Ajusta la altura según tus necesidades */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="jumbotron text-center" style="padding-bottom: 20px;">
+    <h1 class="display-4">¡Bienvenido a VOZIPCOMPANY & ICTLATAM!</h1> 
+    <p class="lead">Aquí podrás conocer nuestros productos y servicios.</p>
+  </div>
+  
+  <!-- Sección de contenido -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h2><b>¿Quienes somos?</b></h2>
+        <p>VOZIPCOMPANY & ICTLATAM, es una empresa especializada en ofrecer conectividad a internet. 
+          Nos enorgullece proporcionar servicios confiables y de alta calidad para satisfacer las necesidades 
+          de nuestros clientes. Nuestro equipo altamente capacitado se dedica a diseñar e implementar 
+          infraestructuras de telecomunicaciones, asegurando una conectividad rápida y estable. Estamos 
+          comprometidos en mantener a nuestros clientes conectados de manera efectiva y segura, permitiéndoles 
+          alcanzar sus objetivos tanto como en sus hogares como en un área empresarial brindando un entorno 
+          altamente conectado.
+        </p>   
+      </div>
+      <div class="col-md-6" id="imagen_antena">
+        <img src="https://media.istockphoto.com/id/1306156001/es/foto/torre-de-telecomunicaciones-con-puntos-de-malla-part%C3%ADculas-brillantes-para-tecnolog%C3%ADa.jpg?b=1&s=612x612&w=0&k=20&c=tTYov8vrW53y58iFaqdkXIvFsfFH60DViXYc6M_BhtE=" style="width: 100%; height: auto;">
+      </div>      
+    </div>
+  </div>
+  
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1892420745007!2d-76.64710323403662!3d3.5437765679605198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30b1e750eef2d1%3A0x552ce1bb52accae9!2sParcelaci%C3%B3n%20Santa%20Clara!5e0!3m2!1ses!2sco!4v1682569906202!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-6">
+        <h2><b>¿Donde estamos ubicados?</b></h2>
+        <p>Estamos ubicados en el km 30 del Valle del Cauca, Colombia. Nuestra sede se encuentra 
+          en la parcelación Santa Clara que nos permite atender de manera eficiente a nuestros 
+          clientes. Estamos perfectamente situados para ofrecer soluciones de conectividad y 
+          telecomunicaciones de alta calidad a empresas y hogares, respaldado por un equipo profesional
+          altamente capacitado. Estamos comprometidos en brindar servicios confiables y soluciones 
+          de conectividad de internet para mantener a nuestros clientes conectados en un mundo cada 
+          vez más interconectado.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container my-4" style="max-width: 950px;">
+    <div class="row">
+      <div class="col-md-12" >
+        <h2 class="text-center"><b>¿Que ofrecemos?</b></h2>
+        <p>En VOZIPCOMPANY & ICTLATAM, ofrecemos servicios de conectividad de internet a 
+          través de antena y fibra óptica. Nuestros planes de 5, 10, 15, 20 y 30 Mbps están 
+          diseñados para adaptarse a diversas necesidades de velocidad y ancho de banda. 
+          Nuestro objetivo es brindar una conexión rápida y estable para hogares, empresas 
+          y organizaciones en el km 30 valle del cauca, Colombia. Además de la conectividad 
+          de internet, también brindamos servicios de soporte técnico y instalación de redes. 
+          Confía en nosotros para obtener una conectividad confiable y aprovecha al máximo las 
+          oportunidades que ofrece el mundo digital.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container" style="padding-bottom: 60px;">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header text-center">
+            <h2>PRODUCTOS</h2>
+          </div>
+          <div class="card-body">
+            <p>Descubre nuestra amplia gama de productos de telecomunicaciones. Estos dispositivos de 
+              alta calidad garantizan una conectividad confiable y eficiente para tus 
+              necesidades residenciales o empresariales. Ofrecemos:</p>
+            <ol>
+              <li>Routers</li>
+              <li>Antenas</li>
+              <li>Cámaras</li>
+            </ol>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary" [routerLink]="['/productos']">VER MÁS</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2 class="text-center">SERVICIOS</h2>
+          </div>
+          <div class="card-body">
+            <p>Nuestros servicios están diseñados para satisfacer tus necesidades de conectividad 
+              y telecomunicaciones. Ofrecemos:</p>
+            <ol>
+              <li>Conexión a Internet</li>
+              <li>Instalación de redes</li>
+              <li>Soporte técnico</li>
+            </ol>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary" [routerLink]="['/servicios']">VER MÁS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-image: url(home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imagen_atena {
+    background-image: url(TELECOMUNICACIONES.jpg);
+    background-size: cover;
+}
+
+
